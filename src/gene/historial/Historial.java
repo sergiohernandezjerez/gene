@@ -3,20 +3,20 @@ package gene.historial;
 import gene.humano.Humano;
 
 public class Historial extends Humano{
+	
 	private String historialCategorias[] = new String[7];
 	
 	
 	public Historial(String categoria) {
-		// TODO Auto-generated constructor stub
+
 		this.historialCategorias = setHistorialCategorias(categoria);
-		
-		
 	}
 	
 	
 	public String[] getHistorialCategorias() {
 		return historialCategorias;
 	}
+	
 	
 	public String[] setHistorialCategorias(String categoria) {
 		
@@ -29,8 +29,8 @@ public class Historial extends Humano{
 					historialCategorias[i] = categoria;
 				}
 			}
-
 		}
+		
 		return historialCategorias;
 	}
 	

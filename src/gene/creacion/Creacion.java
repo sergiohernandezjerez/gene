@@ -13,6 +13,7 @@ public class Creacion {
 		// TODO Auto-generated method stub
 		ArrayList<Humano> listaHumanos = new ArrayList<Humano>();
 		
+		//creamos i numero de humanos
 		for (int i = 0; i < 100; i++) {
 			listaHumanos.add(new Humano());
 		}

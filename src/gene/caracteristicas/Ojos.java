@@ -4,11 +4,6 @@ import gene.humano.Humano;
 
 public class Ojos {
 	
-	static final int COLOR_AZUL = 97;
-	
-	private String colorOjos;
-	private int idColorOjos;
-	
 	/*
 	 * Porcentaje mundial color de ojos
 	 * marrón - 73%
@@ -53,10 +48,14 @@ public class Ojos {
 				{0,      2,        5}				
 		};
 	
+	static final int COLOR_AZUL = 97;
+	
+	private String colorOjos;
+	private int idColorOjos;
+	
 	
 	public Ojos(String color) {
 		this.colorOjos = color;
-		
 	}
 	
 	public Ojos() {
@@ -67,6 +66,7 @@ public class Ojos {
 		if (humano.getAskembla() == false) {
 			generarColorOjos();
 		}else {
+			// todo
 			//generaColorOjosHijos(sumaColoresPadres(idColorOjosMadre, idColorOjosPadre));
 		}
 	}
@@ -85,46 +85,17 @@ public class Ojos {
 	
 	public void setColorOjos(String color) {
 		this.colorOjos = color;
-
 	}
 	
 	 
-	
 	public void generarColorOjos() {
-		
 		int numeroAleatorio = (int)(Math.random() * 100);
 		calculoColorOjos(numeroAleatorio, 73, 83);
-		
-	}
-	
-	
-		
-	public void generaColorOjosHijos(int sumaColoresPadres) {
-		int numeroAleatorio = (int)(Math.random() * 100);
-	    int verde = 0;
-	    int marron = 0;
-	    
-		if (sumaColoresPadres < 0) {
-			generarColorOjos();
-		}else {
-			for (int i = 0; i < tablaOjos.length; i++) {
-		        if(tablaOjos[i][0] == sumaColoresPadres) {
-		            marron = tablaOjos[i][2];
-		            verde = tablaOjos[i][3];
-		            break;
-		        }
-		    }
-			calculoColorOjos(numeroAleatorio, marron, verde);
-		}
-	}
-	
-	public int sumaColoresPadres(int idColorOjosMadre, int idColorOjosPadre) {
-		int suma = idColorOjosMadre + idColorOjosPadre;
-		return suma;
 	}
 	
 	
 	public void calculoColorOjos(int numeroAleatorio, int marron, int verde) {
+		
 		String colorOjos = "";
 		int idColorOjos = 0;
 		
@@ -141,14 +112,16 @@ public class Ojos {
 	        colorOjos = "Heterocromía";
 	        idColorOjos = -4;
 	    }
+		
 		setColorOjos(colorOjos);
 		setIdColorOjos(idColorOjos);
 	}
 
 	
-	
 	public void mostrarInfoOjos() {
+		
 		System.out.println("Color de ojos: " + this.getColorOjos());
+		
 	}
 
 }

@@ -4,7 +4,6 @@ public class Poblacion {
 	
 	// porcentajes y colores al final del documento
 	
-	
 	private static String asiatica = "Asiática";
 	private static String negra = "Negra";
 	private static String mora = "Mora";
@@ -22,12 +21,15 @@ public class Poblacion {
 	public String getPoblacion() {
 		return poblacion;
 	}
+	
 	public void setPoblacion(String poblacion) {
 		this.poblacion = poblacion;
 	}
+	
 	public String getColorPiel() {
 		return colorPiel;
 	}
+	
 	public void setColorPiel(String colorPiel) {
 		this.colorPiel = colorPiel;
 	}
@@ -39,16 +41,15 @@ public class Poblacion {
 	public Poblacion(String poblacion, String colorPiel) {
 		this.poblacion = poblacion;
 		this.colorPiel = colorPiel;
-		
 	}
 	
 	public Poblacion(String poblacion) {
 		this.poblacion = poblacion;
 		generaColorPiel(poblacion);
-		
 	}
 	
 	public void generaPoblacion() {
+		
 		int porcentaje = (int) (Math.random() * 100);
 		
 		if (porcentaje < tablaPorcentajePoblacion[0]) {
@@ -69,7 +70,9 @@ public class Poblacion {
 				
 	}
 	
+	
 	public void generaColorPiel(String poblacion) {
+		
 		if(poblacion != null) {
 			switch (poblacion) {
 			case "Asiática":
@@ -94,8 +97,8 @@ public class Poblacion {
 			}
 		}
 		
-		
 	}
+	
 	
 	public String  generaColorPielAsiatica() {
 		int porcentaje = (int) (Math.random() * 100);
@@ -107,6 +110,7 @@ public class Poblacion {
 		}
 		return colorPiel;
 	}
+	
 	
 	public void mostrarInfoPoblacion() {
 		System.out.println("Población: " + this.getPoblacion());
@@ -124,7 +128,7 @@ public class Poblacion {
 	 * Blancos 14% piel blanca 
 	 * Latinos 7% piel morena 
 	 * 
-	 * 
+	 * tabla de valores de colores de piel. Para la representación gráfica
 	 * piel morena
 	 * #BF7B54 RGB 191, 123, 84 HSV 22, 56, 75 CMYK 0, 35, 56, 25 LAB 58, 22, 32
 	 * 

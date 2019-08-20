@@ -3,17 +3,6 @@ package gene.caracteristicas;
 import java.lang.Math;
 
 public class Cabello{
-	
-	/*
-	 * según la población a la que pertenece el humano el tipo y color de pelo
-	 * deberá ajustarse a las características de dicha población
-	 * 
-	 * Negros pelo negro y muy rizado
-	 * Asiáticos pelo negro y liso
-	 * Latinos y Blancos pelo variado
-	 * Moros pelo negro y rizado
-	 * Indios pelo negro y forma variada
-	 */
 		
 	private String colorCabello;
 	private String formaCabello;
@@ -22,7 +11,6 @@ public class Cabello{
 	public Cabello(String poblacion) {
 		setCabello(poblacion);
 	}
-	
 	
 	public String getColorCabello() {
 		return colorCabello;
@@ -66,6 +54,16 @@ public class Cabello{
 		}
 	}
 	
+	/*
+	 * según la población a la que pertenece el humano el tipo y color de pelo
+	 * deberá ajustarse a las características de dicha población
+	 * 
+	 * Negros pelo negro y muy rizado
+	 * Asiáticos pelo negro y liso
+	 * Latinos y Blancos pelo variado
+	 * Moros pelo negro y rizado
+	 * Indios pelo negro y forma variada
+	 */
 	
 	public void setCabello(String poblacion) {
 		if(poblacion != null) {

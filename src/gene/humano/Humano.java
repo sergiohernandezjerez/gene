@@ -10,7 +10,7 @@ import gene.caracteristicas.Poblacion;
 public class Humano {
 
 	private boolean askembla;
-	private int idHumano = 0;
+	//private int idHumano = 0; // todo
 	private int CONTADOR_HISTORIAL_CATEGORIA = 0;
 	private String nombre;
 	private String apellido;
@@ -38,8 +38,8 @@ public class Humano {
 		this.ojos = new Ojos();
 		setContadores();
 		CONTADOR_HISTORIAL_CATEGORIA++;
-		
 	}
+	
 	
 	public void setContadores() {
 		Datos.setContadorOrientacionSexual(sexo.getOrientacionSexual());
@@ -48,6 +48,7 @@ public class Humano {
 		Datos.setContadorGenero(sexo.getGenero());
 		Datos.setContadorPoblacion(poblacion.getPoblacion());
 	}
+	
 	
 	public Humano(String nombre, String apellido, int edad, int sexo, String orientacionsexual) {
 		this.nombre = nombre;
@@ -60,6 +61,7 @@ public class Humano {
 		this.ojos = new Ojos();
 	}
 	
+	
 	public Humano(String nombre, String apellido, int edad) {
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -70,6 +72,7 @@ public class Humano {
 		this.cabello = new Cabello(poblacion.getPoblacion());
 		this.ojos = new Ojos();
 	}
+	
 	
 	public Humano(String nombre) {
 		this.nombre = nombre;
@@ -82,6 +85,7 @@ public class Humano {
 		this.ojos = new Ojos();
 	}
 	
+	
 	public Humano(String nombre, String apellido) {
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -93,38 +97,47 @@ public class Humano {
 		this.ojos = new Ojos();
 	}
 	
+	
 	public String[] getHistorialCategorias() {
 		return this.historialCategoria;
 	}
+	
 	
 	public Cabello getCabello() {
 		return this.cabello;
 	}
 	
+	
 	public Poblacion getPoblacion() {
 		return this.poblacion;
 	}
+	
 	
 	public Ojos getOjos() {
 		return this.ojos;
 	}
 	
+	
 	public Sexo getSexo() {
 		return this.sexo;
 	}
-		
+	
+	
 	public int edadAleatoria() {
 		return (int) (Math.random() * 120);
 	}
 	
+	
 	public void setEdadFinal(int edad) {
 		historialEdad[1] = edad;
 	}
-			
+		
+	
 	public void setCategoria() {
 		this.categoria = Categoria.getCategoria(this.edad);
 		updateHistorialCategoria(categoria);
 	}
+	
 	
 	public String getCategoria() {
 		return categoria;
@@ -202,12 +215,12 @@ public class Humano {
 		return historialCategoria;
 	}
 	
+	
 	public void mostrarHistorialCategoria() {
 		System.out.println("\nHistorial de categorias: ");
 		
 		for (int i = 0; i < historialCategoria.length; i++) {
 			System.out.print(historialCategoria[i]);
-			
 			if (i != historialCategoria.length-1) {
 				System.out.print(", ");
 				
@@ -216,8 +229,10 @@ public class Humano {
 			}
 			
 		}
+		
 		System.out.println();
 	}
+	
 	
 	public void mostrarHistorialEdad() {
 		System.out.println("Edad inicial: " + historialEdad[0] + 

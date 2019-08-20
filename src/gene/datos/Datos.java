@@ -72,16 +72,19 @@ public class Datos {
 			"AURORA","VEGA","DENEB","ALTAIR","ESTEL"
 	};
 	
+	
 	public static String getNombreAleatorio(String genero) {
+		
 		int posicion;
+		
 		if (genero.equalsIgnoreCase("Femenino")) {
 			posicion = (int) (Math.random() * nombresFemeninos.length);
 			return nombresFemeninos[posicion];
+			
 		} else {
 			posicion = (int) (Math.random() * nombresMasculinos.length);
 			return nombresMasculinos[posicion];
 		}
-		
 	}
 	
 	public static String getApellidoAleatorio() {
@@ -98,17 +101,21 @@ public class Datos {
 
 		if (genero.equalsIgnoreCase("Masculino")) {
 			contadorGenero[0]++;
+			
 		} else if (genero.equalsIgnoreCase("Femenino")) {
 			contadorGenero[1]++;
 		}
 	}
 	
+	
 	public static void mostrarEstadisticasGenero() {
+		
 		System.out.println("-----Estadisticas Genero-----");
 		System.out.println("Mujeres: " + contadorGenero[1]);
 		System.out.println("Hombres : " + contadorGenero[0]);
 		System.out.println("-----------------------------------------");
 	}
+	
 	
 	public static int[] getContadorOrientacionSexual() {
 		return contadorOrientacionSexual;
@@ -116,7 +123,9 @@ public class Datos {
 
 
 	public static void setContadorOrientacionSexual(String orientacionSexual) {
+		
 		if (orientacionSexual != null) {
+			
 			switch (orientacionSexual) {
 			case "Mujer Heterosexual":
 				contadorOrientacionSexual[0]++;
@@ -135,10 +144,10 @@ public class Datos {
 				break;
 			}
 		}
-		
 	}
 	
 	public static void mostrarEstadisticasOrientacionSexual() {
+		
 		System.out.println("-----Estadisticas orientación Sexual-----");
 		System.out.println("Mujeres Heterosexuales: " + 
 							contadorOrientacionSexual[0]);
@@ -154,8 +163,9 @@ public class Datos {
 	
 	// posicon: 0 negro, 1 rubio, 2 moreno, 3 pelirrojo, 4 blanco
 	public static void setContadorColorCabello(String colorCabello) {
+		
 		if (colorCabello != null) {
-			
+
 			switch (colorCabello) {
 			case "Negro":
 				contadorColorCabello[0]++;
@@ -176,11 +186,10 @@ public class Datos {
 				break;
 			}
 		}
-		
-		
 	}
 	
 	public static void mostrarEstadisticasColorCabello() {
+		
 		System.out.println("-----Estadisticas color de pelo-----");
 		System.out.println("Negro : " + 	contadorColorCabello[0]);
 		System.out.println("Rubio : " + contadorColorCabello[1]);
@@ -190,12 +199,16 @@ public class Datos {
 		System.out.println("-----------------------------------------");
 	}
 	
+	
 	public static int[] getContadorColorOjos() {
 		return contadorColorOjos;
 	}
 	
+	
 	public static void setContadorColorOjos(String colorOjos) {
+		
 		if (colorOjos != null) {
+			
 			switch (colorOjos) {
 			case "Marrón":
 				contadorColorOjos[0]++;
@@ -210,14 +223,14 @@ public class Datos {
 				contadorColorOjos[3]++;
 				break;
 			default:
-				
 				break;
 			}
-		}
-				
+		}		
 	}
 	
+	
 	public static void mostrarEstadisticasColorOjos() {
+		
 		System.out.println("-----Estadisticas color de ojos-----");
 		System.out.println("Marrón : " + 	contadorColorOjos[0]);
 		System.out.println("Verde : " + contadorColorOjos[1]);
@@ -232,8 +245,11 @@ public class Datos {
 		return contadorPoblacion;
 	}
 	
+	
 	public static void setContadorPoblacion(String poblacion) {
+		
 		if (poblacion != null) {
+			
 			switch (poblacion) {
 			case "Asiática":
 				contadorPoblacion[0]++;
@@ -254,16 +270,14 @@ public class Datos {
 				contadorPoblacion[5]++;
 				break;
 			default:
-				
 				break;
 			}
-		}
-		
-		
-		
+		}		
 	}
 	
+	
 	public static void mostrarEstadisticasPoblacion() {
+		
 		System.out.println("-----Estadisticas población-----");
 		System.out.println("Asiática : " + 	contadorPoblacion[0]);
 		System.out.println("India : " + 	contadorPoblacion[1]);
@@ -274,6 +288,5 @@ public class Datos {
 		System.out.println("-----------------------------------------");
 	}
 	
-
 
 }

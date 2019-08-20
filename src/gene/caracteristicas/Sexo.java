@@ -8,24 +8,22 @@ public class Sexo {
 	public Sexo(String genero, String orientacionSexual) {
 		this.genero = genero;
 		this.orientacionSexual = orientacionSexual;
-		
 	}
 	
 	public Sexo(String genero) {
 		this.genero = genero;
-		setOrientacionSexual(genero);
-		
-		
+		setOrientacionSexual(genero);		
 	}
 	
 	public Sexo() {
 		setGenero();
 		setOrientacionSexual(getGenero());
-		
 	}
 	
 	public void setGenero() {
+		
 		int sexo = (int) (Math.random() * 100);
+		
 		if (sexo < 50){
 			this.genero = "Femenino";
 		} else if (sexo >= 50){
@@ -54,13 +52,16 @@ public class Sexo {
 	 * gay 15%
 	 */
 	public void setOrientacionSexual(String genero) {
+		
 		int porcentaje = (int) (Math.random() * 100);
+		
 		if (genero.equalsIgnoreCase("Femenino")) {
 			if (porcentaje <= 12) {
 				this.orientacionSexual = "Lesbiana";
 			}else if (porcentaje > 12) {
 				this.orientacionSexual = "Mujer Heterosexual";
 			}
+			
 		}else if (genero.equalsIgnoreCase("Masculino")) {
 			if (porcentaje <= 15) {
 				this.orientacionSexual = "Gay";
