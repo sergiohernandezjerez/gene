@@ -141,6 +141,11 @@ public class Consultas {
 		System.out.println();
 	}
 	
+	/**
+	 * Muestra los datos del humano
+	 * @param humano
+	 */
+	
 	public static void mostrarHumano(Humano humano) {
 		System.out.println("--------------------------------------------------");
 		System.out.println("Nombre completo: " + humano.getNombreYApellido());
